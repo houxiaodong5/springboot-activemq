@@ -1,0 +1,15 @@
+
+#61616为消息代理接口，8161位管理界面
+server:
+  port: 8081
+  context-path: /consumer-a
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+    pool:
+      enabled: true
+      max-connections: 10
+queueName: publish.queue
+topicName: publish.topic

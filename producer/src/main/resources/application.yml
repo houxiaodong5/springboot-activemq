@@ -1,0 +1,15 @@
+#61616为服务默认接口  8161位自带管理界面端口
+server:
+  port: 8080
+  context-path: /pro
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+    pool:
+      enabled: true
+      max-connections: 10
+
+queueName: publish.queue
+topicName: publish.topic
